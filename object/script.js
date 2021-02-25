@@ -102,28 +102,57 @@
 //     let irfan = Mahasiswa("Irfan",20); 
 
 
-//Model Constraction Function
-function Mahasiswa(nama, energi){ //used capital for function
-        //let this = Object.create(Mahasiswa.prototye); ->secara otomatis membuat variabel this, parent object Mahasiswa.prototye
+// //Model Constraction Function
+// function Mahasiswa(nama, energi){ //used capital for function
+//         //let this = Object.create(Mahasiswa.prototye); ->secara otomatis membuat variabel this, parent object Mahasiswa.prototye
+//         this.nama = nama;
+//         this.energi = energi;
+// }
+
+// Mahasiswa.prototype.makan = function (prosi) {
+//     this.energi += prosi;
+//     return console.log(`Halo ${this.nama}, selamat makan!`);
+// }
+
+// Mahasiswa.prototype.main = function (jam) {
+//     this.energi -= jam;
+//     return console.log(`Helo ${this.nama}, selamat bermain!`);
+// }
+
+// Mahasiswa.prototype.tidur = function (jam) {
+//     this.energi += jam * 2;
+//     return console.log(`Helo ${this.nama}, selamat tidur!`);
+// }
+
+
+//     let gilang = new Mahasiswa("Gilang",10);
+//     let irfan = new Mahasiswa("Irfan",20); 
+
+
+//Versi Class
+class Mahasiswa {
+    constructor(nama, energi){
         this.nama = nama;
         this.energi = energi;
-}
+    }
 
-Mahasiswa.prototype.makan = function (prosi) {
-    this.energi += prosi;
-    return console.log(`Halo ${this.nama}, selamat makan!`);
-}
 
-Mahasiswa.prototype.main = function (jam) {
-    this.energi -= jam;
-    return console.log(`Helo ${this.nama}, selamat bermain!`);
-}
+    makan(prosi) {
+        this.energi += prosi;
+        return console.log(`Halo ${this.nama}, selamat makan!`);
+    }
 
-Mahasiswa.prototype.tidur = function (jam) {
-    this.energi += jam * 2;
-    return console.log(`Helo ${this.nama}, selamat tidur!`);
-}
+    main(jam) {
+        this.energi -= jam;
+        return console.log(`Helo ${this.nama}, selamat bermain!`);
+    }
 
+    tidur(jam) {
+        this.energi += jam * 2;
+        return console.log(`Helo ${this.nama}, selamat tidur!`);
+    }
+
+}
 
     let gilang = new Mahasiswa("Gilang",10);
     let irfan = new Mahasiswa("Irfan",20); 
